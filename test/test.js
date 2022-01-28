@@ -34,7 +34,7 @@ describe('node-aes-gcm', function () {
     });
 
     if (nist) {
-      it('should match the NIST ciphertext when encrypted', function () {
+      it('should match the NIST ciphertext when encrypted ', function () {
         encrypted.should.have.ownProperty('ciphertext');
         encrypted.ciphertext.should.be.an.instanceOf(Buffer);
         encrypted.ciphertext.equals(ciphertext).should.be.ok();
